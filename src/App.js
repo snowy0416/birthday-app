@@ -15,7 +15,7 @@ function App() {
   const [showSurprise, setShowSurprise] = useState(false);
 
   // Constants
-  const SECRET_PASSWORD = 'nigga';
+  const SECRET_PASSWORD = 'birthday';
   const EGG_CODE = 'iddqd';
   const MAX_ATTEMPTS = 5;
   const YOUTUBE_VIDEO_ID = 'mIX39c8Byb8'; // From your YouTube link
