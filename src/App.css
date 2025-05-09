@@ -1,12 +1,11 @@
 body {
-  /* background-color: black; */
+  background-color: black;
   color: limegreen;
   font-family: 'Press Start 2P', monospace;
   text-align: center;
   padding: 2rem;
- background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/039ade2b-7d90-4abe-8521-63ad5865f6de/dfm5ny8-54204616-020d-4ba6-be20-93dfc5402e11.png/v1/fill/w_1095,h_730,q_70,strp/80s_retro_gaming_diffused_with_modern_gaming_setup_by_minhazabtahi_dfm5ny8-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvMDM5YWRlMmItN2Q5MC00YWJlLTg1MjEtNjNhZDU4NjVmNmRlXC9kZm01bnk4LTU0MjA0NjE2LTAyMGQtNGJhNi1iZTIwLTkzZGZjNTQwMmUxMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.niXfCDfcxCbLP8Pi11wQuGB1EAtK9PpvWG6QcnzxIa0');
+ background-image: url('https://wallpaperaccess.com/full/2488356.jpg');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -54,11 +53,25 @@ body {
 
 
 .login-screen {
-  max-width: 400px;
-  margin: 2rem auto;
-  text-align: center;
+  position: relative;
+  top: 50vh; 
+  left: 50vw; 
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90%;
   padding: 2rem;
-  margin-left:40%
+  text-align: center;
+  margin: 0; 
+}
+
+
+
+/* For mobile responsiveness */
+@media (max-width: 480px) {
+  .login-screen {
+    width: 95%;
+    padding: 1.5rem;
+  }
 }
 
 .hint {

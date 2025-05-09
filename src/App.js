@@ -91,7 +91,7 @@ function App() {
   if (!isLoggedIn) {
     return (
       <div className="login-screen nes-container is-rounded">
-        <h1 className="title">🎮 BIRTHDAY QUEST 🎮</h1>
+        <h1 className="title">🎮BDY QUEST🎮</h1>
         <p>Enter your name and crack the code!</p>
         
         <form onSubmit={handleSubmit}>
