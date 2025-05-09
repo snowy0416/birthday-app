@@ -4,6 +4,10 @@ body {
   font-family: 'Press Start 2P', monospace;
   text-align: center;
   padding: 2rem;
+ background-image: url('https://wallpapercave.com/wp/wp5404240.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .press-start h1 {
