@@ -1,38 +1,281 @@
-.App {
+body {
+  background-color: black;
+  color: limegreen;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  padding: 2rem;
+}
+
+.press-start h1 {
+  font-size: 1.2rem;
+  animation: blink 1s step-end infinite;
+}
+
+.cat-sprite {
+  width: 100px;
+  margin: 20px auto;
+}
+
+.start-btn {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: transform 0.2s;
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
+}
+
+.car-easter-egg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+.login-screen {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hint {
+  color: #ff5555;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.easter-egg-hint {
+  opacity: 0.5;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+}
+
+.easter-egg-hint code {
+  background: #333;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+
+
+/* Birthday Message Styles */
+.birthday-message {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message-content {
+  margin-top: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Cake Animation */
+.cake-container {
+  margin: 3rem auto;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cake {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  background: #f9c7c7;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.frosting {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-radius: 50% 50% 0 0;
+}
+
+.candles {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  position: absolute;
+  top: -70px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Candle Styles */
+.candles {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: -70px;
+  width: 100%;
+  transition: all 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.candle {
+  width: 12px;
+  height: 60px;
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  position: relative;
+  border-radius: 2px;
+}
+
+.flame {
+  width: 16px;
+  height: 30px;
+  background: #ffef00;
+  border-radius: 50% 50% 20% 20%;
+  position: absolute;
+  top: -30px;
+  left: -2px;
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff5500;
+  animation: flicker 0.8s infinite alternate;
+  transform-origin: center bottom;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes flicker {
+  0%, 100% { 
+    transform: scale(1) rotate(-2deg); 
+    opacity: 1; 
   }
-  to {
-    transform: rotate(360deg);
+  25% { 
+    transform: scale(1.05) rotate(2deg); 
+    opacity: 0.9;
+  }
+  50% { 
+    transform: scale(0.95) rotate(-1deg);
+    opacity: 0.95;
+  }
+  75% { 
+    transform: scale(1.03) rotate(1deg);
+    opacity: 0.9;
+  }
+}
+
+/* Blown-out state */
+.candle .flame.hidden {
+  opacity: 0;
+  transform: scale(0);
+  animation: none;
+}
+
+.blow-button {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 99, 71, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 99, 71, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 99, 71, 0); }
+}
+
+.wish-message {
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Surprise Button Styles */
+.surprise-button {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+/* Surprise Content */
+.surprise-content {
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.pixel-gift {
+  width: 150px;
+  image-rendering: pixelated;
+  margin: 1rem auto;
+  filter: drop-shadow(0 0 5px gold);
+}
+
+/* Video Player Styles */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px #000, 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 8px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.surprise-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.surprise-container h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff69b4;
+  text-shadow: 2px 2px 0 #000;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cake {
+    width: 250px;
+    height: 120px;
+  }
+  .candles {
+    top: -60px;
+  }
+  .candle {
+    height: 40px;
   }
 }
