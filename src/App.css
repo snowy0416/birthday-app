@@ -296,4 +296,13 @@ body {
   .candle {
     height: 40px;
   }
+ 
+.birthday-message {
+  max-width: 50%px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
 }
